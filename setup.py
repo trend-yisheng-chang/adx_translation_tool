@@ -11,6 +11,9 @@ setup(
     url='https://github.com/trend-yisheng-chang/adx_translation_tool.git',
     packages=find_packages(),
     install_requires=['openai', 'sqlparse', 'pyspark', 'scikit-learn'],
+    include_package_data=True,
+    package_data={'adx_translation_tool': [
+        'ground_truths.json', 'kusto_keywords.txt']},
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
