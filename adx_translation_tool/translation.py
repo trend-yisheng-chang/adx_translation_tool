@@ -11,7 +11,7 @@ class Translation():
     def __init__(self, adx_functions_path, adx_tables_path, openai_api_key=None):
         self.spark = SparkSession.builder.getOrCreate()
         self.kusto_template = KustoTemplate(self._read_function_csv(
-            adx_functions_path), self._read_table_csv(adx_tables_path), )
+            adx_functions_path), self._read_table_csv(adx_tables_path), constant.KUSTO_KEYWORD_TXT_PATH)
         self.similar_query = SimilarQuery(constant.GROUND_TRUTH_JSON_PATH)
         openai.base_url = constant.OPEN_AI_BASE_URL
         openai.api_key = openai_api_key or os.getenv('OPEN_AI_API_KEY')
