@@ -1,6 +1,6 @@
 from .query_structure.template import SparkSQLTemplate, KustoTemplate
 from .query_structure.similar_query import SimilarQuery
-import constant
+from . import constant
 import openai
 import os
 import re

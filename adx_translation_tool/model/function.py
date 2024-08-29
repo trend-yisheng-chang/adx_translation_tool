@@ -1,5 +1,5 @@
 import re
-from query_structure.template import KustoTemplate
+from ..query_structure.template import KustoTemplate
 
 
 class Function():
